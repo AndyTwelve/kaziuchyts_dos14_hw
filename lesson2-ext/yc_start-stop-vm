@@ -1,0 +1,3 @@
+alias start_yc_vm="yc compute instance start yc-ubuntu-2204lts"
+alias stop_yc_vm="yc compute instance stop yc-ubuntu-2204lts"
+

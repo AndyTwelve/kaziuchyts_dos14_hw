@@ -1,0 +1,5 @@
+Host yc_vm
+User kaziuchyts
+CheckHostIP no
+ProxyCommand bash -c "nc $(~/.ssh/yc_find-ip) %p"
+IdentityFile /home/andy12/.ssh/yc-vm-key-pair
