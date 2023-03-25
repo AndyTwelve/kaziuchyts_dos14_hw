@@ -1,0 +1,45 @@
+6. nmap
+
+Nmap — это инструмент командной строки для сканирования портов, аудита сетевой безопасности, обнаружения хостов и служб и получения списка открытых портов.
+Запущенная без дополнительных опций или атрибутов nmap сканирует только самые популярные 1000 портов.
+
+Примеры использвания:
+$ sudo nmap -sT 192.168.100.6
+Starting Nmap 7.80 ( https://nmap.org ) at 2023-03-25 20:48 +03
+Nmap scan report for win-0rkj1vrose8 (192.168.100.6)
+Host is up (0.00070s latency).
+Not shown: 993 filtered ports
+PORT      STATE SERVICE
+135/tcp   open  msrpc
+139/tcp   open  netbios-ssn
+445/tcp   open  microsoft-ds
+3389/tcp  open  ms-wbt-server
+5357/tcp  open  wsdapi
+7070/tcp  open  realserver
+49152/tcp open  unknown
+MAC Address: 04:D9:F5:B0:B6:5F (Asustek Computer)
+--------------------------------------------------------
+$ sudo nmap -O 192.168.100.6
+Starting Nmap 7.80 ( https://nmap.org ) at 2023-03-25 20:49 +03
+Nmap scan report for win-0rkj1vrose8 (192.168.100.6)
+Host is up (0.00033s latency).
+Not shown: 993 filtered ports
+PORT      STATE SERVICE
+135/tcp   open  msrpc
+139/tcp   open  netbios-ssn
+445/tcp   open  microsoft-ds
+3389/tcp  open  ms-wbt-server
+5357/tcp  open  wsdapi
+7070/tcp  open  realserver
+49152/tcp open  unknown
+MAC Address: 04:D9:F5:B0:B6:5F (Asustek Computer)
+Warning: OSScan results may be unreliable because we could not find at least 1 open and 1 closed port
+Device type: general purpose
+Running (JUST GUESSING): Microsoft Windows 2008 (86%)
+OS CPE: cpe:/o:microsoft:windows_server_2008::sp1 cpe:/o:microsoft:windows_server_2008:r2
+Aggressive OS guesses: Microsoft Windows Server 2008 SP1 or Windows Server 2008 R2 (86%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 1 hop
+
+OS detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 10.41 seconds
