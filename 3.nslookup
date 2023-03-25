@@ -1,0 +1,53 @@
+3. nslookup
+
+Команда nslookup — инструмент сетевого администрирования для запросов в доменной системе имен (DNS) с целью получения доменного имени, IP-адреса или другой информации из записей DNS.
+Часто используется для диагностики и устранения проблем с DNS. Может работать в интерактивном и неинтерактивном режиме
+
+Примеры использвания:
+$ nslookup yandex.ru 		*//неинтерактивный режим
+Server:		127.0.0.53
+Address:	127.0.0.53#53
+
+Non-authoritative answer:
+Name:	yandex.ru
+Address: 5.255.255.77
+Name:	yandex.ru
+Address: 5.255.255.70
+Name:	yandex.ru
+Address: 77.88.55.60
+Name:	yandex.ru
+Address: 77.88.55.88
+Name:	yandex.ru
+Address: 2a02:6b8:a::a
+------------------------------------
+$ nslookup			*//интерактивный режим
+> google.com
+Server:		127.0.0.53
+Address:	127.0.0.53#53
+
+Non-authoritative answer:
+Name:	google.com
+Address: 192.178.25.174
+Name:	google.com
+Address: 2a00:1450:401b:814::200e
+> mail.ru
+Server:		127.0.0.53
+Address:	127.0.0.53#53
+
+Non-authoritative answer:
+Name:	mail.ru
+Address: 217.69.139.202
+Name:	mail.ru
+Address: 94.100.180.201
+Name:	mail.ru
+Address: 94.100.180.200
+Name:	mail.ru
+Address: 217.69.139.200
+Name:	mail.ru
+Address: 2a00:1148:db00:0:b0b0::1
+>
+-----------------------------------
+$ nslookup 5.255.255.70
+70.255.255.5.in-addr.arpa	name = yandex.ru.
+
+Authoritative answers can be found from:
