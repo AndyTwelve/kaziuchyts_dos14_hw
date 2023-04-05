@@ -1,0 +1,2 @@
+4) Синхронизировать c сервером только сгенерированные файлы больше 400kb
+rsync -vrza --min-size='400K' /home/andy12/outputfiles andy12@localhost:/home/andy12/inputfiles
