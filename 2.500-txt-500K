@@ -1,0 +1,2 @@
+2) Сгенерировать 500 текстовых файлов размером 500кб
+for i in {501..1000};do dd if=/dev/urandom of=/dev/stdout bs=500K count=1 2>/dev/null | base64 >$i.txt;done
